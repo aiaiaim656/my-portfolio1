@@ -1,0 +1,1226 @@
+@charset "utf-8";
+@import url(common.css);
+
+/* 以下にCSSを記述する↓↓↓↓ */
+body {
+    font-family: "Roboto", "M PLUS 1 Code", "Mochiy Pop One", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 16px;
+    color: #333333;
+    background-image: url(../images/9bg_img.png);
+    background-repeat: repeat;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+#header {
+    width: 100%;
+    background-color: #A6F1D5;
+    height: 110px;
+
+}
+
+.iNner {
+    max-width: 1040px;
+    margin: 0 auto;
+}
+
+.naVevent {
+    margin: 0;
+}
+
+.naVtop {
+    display: flex;
+    width: 1440px;
+}
+
+.naVmenu {
+    display: flex;
+    color: #BD89FF;
+    font-size: 24px;
+    font-weight: bolder;
+    text-shadow: 3px 3px #fff;
+    line-height: normal;
+    margin-top: 25px;
+    margin-left: 80px;
+}
+
+.naVmenu li {
+    margin: 0 40px;
+    text-align: center;
+}
+
+/* ナビのホバー */
+.puku_btn {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+}
+
+.puku_btn:hover {
+    transform: scale(1.5, 1.5);
+}
+
+
+
+/* 追従バナー */
+.snsIcon {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    z-index: 99999;
+}
+
+.snsIcon {
+    display: flex;
+    flex-direction: column;
+}
+
+/* 追従のホバー */
+.puku_btn2 {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+}
+
+.puku_btn2:hover {
+    transform: scale(1.2, 1.2);
+}
+
+
+/* ファーストビュー */
+
+.slider {
+    position: relative;
+    width: 100%;
+    height: 1440px;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    animation: slideShow 15s infinite;
+    /*総表示時間*/
+}
+
+/* 3枚・各5秒想定 */
+.slide:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.slide:nth-child(2) {
+    animation-delay: 5s;
+}
+
+.slide:nth-child(3) {
+    animation-delay: 10s;
+}
+
+/* ほぼ瞬間切り替え */
+@keyframes slideShow {
+    0% {
+        opacity: 0;
+    }
+
+    5% {
+        opacity: 1;
+    }
+
+    /* ほぼ即表示 */
+    32% {
+        opacity: 1;
+    }
+
+    /* 表示維持 */
+    39% {
+        opacity: 0;
+    }
+
+    /* ほぼ即消える */
+    100% {
+        opacity: 0;
+    }
+}
+
+/* ↑ファーストビューここまで */
+
+
+/* トップ動画 */
+.moVie01 {
+    position: absolute;
+    bottom: 1rem;
+    right: 2rem;
+}
+
+.absolute04 {
+    position: absolute;
+    bottom: 230px;
+    right: 150px;
+}
+
+/* 見出し */
+.fontMochiy {
+    font-family: Mochiy Pop One;
+}
+
+
+.mAincatch {
+    font-size: 56px;
+    text-align: center;
+    margin-top: -560px;
+    color: #fff;
+    text-shadow: 2px 2px 10px #BD89FF, -2px 2px 10px #BD89FF, 2px -2px 10px #BD89FF, -2px -2px 10px #BD89FF;
+    background-image: url(/images/12h1_banner.png);
+    background-repeat: no-repeat;
+    width: 1132px;
+    height: 358px;
+    padding-top: 115px;
+    padding-right: 35px;
+}
+
+/* キャンペーン説明ゾーン */
+
+.cPst01 {
+    font-size: 24px;
+    font-weight: bold;
+    border: 6px solid #000;
+    border-radius: 20px;
+    text-align: center;
+    width: 285px;
+    height: 165px;
+    padding: 22px 39px 2px;
+    margin-top: -20px;
+    background-color: #FF9ABA;
+}
+
+.sT01 {
+    padding: 60px 20px 5px 20px;
+}
+
+
+.cPst02 {
+    font-size: 24px;
+    font-weight: bold;
+    border: 6px solid #000;
+    border-radius: 20px;
+    text-align: center;
+    width: 285px;
+    height: 165px;
+    padding: 22px 39px 2px;
+    margin-top: -20px;
+    background-color: #D2AEFF;
+}
+
+.sT02 {
+    padding: 60px 20px 5px 20px;
+}
+
+.cPst03 {
+    font-size: 24px;
+    font-weight: bold;
+    border: 6px solid #000;
+    border-radius: 20px;
+    text-align: center;
+    width: 285px;
+    height: 165px;
+    padding: 22px 39px 2px;
+    margin-top: -20px;
+    background-color: #FF9ABA;
+}
+
+.sT03 {
+    padding: 60px 20px 5px 20px;
+}
+
+.sankaku {
+    margin-top: -120px;
+    margin-right: 100px;
+    margin-left: -25px;
+    margin-bottom: 100px;
+}
+
+#taGcp {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 45px;
+    max-width: 1040px;
+}
+
+/* 投稿見本ゾーン */
+.pHotoimg {
+    display: flex;
+    justify-content: space-around;
+}
+
+.tAgtex {
+    display: flex;
+    justify-content: space-between;
+    margin-top: -325px;
+    margin-bottom: 250px;
+}
+
+.tExtag {
+    margin-top: -200px;
+    text-align: center;
+    margin-bottom: 150px;
+}
+
+.aSset18 {
+    margin-top: -200px;
+    margin-left: -25px;
+    margin-bottom: 25px;
+}
+
+.mIhon {
+    width: 1040px;
+}
+
+/* ここからキャンペーン詳細　＃推しトキCP */
+.mOchi01 {
+    font-family: Mochiy Pop One;
+    font-size: 48px;
+    text-align: center;
+    color: #FF9ABA;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: #FFFFA6;
+    text-shadow: 2px 2px 10px #000, -2px 2px 10px #A6F1D5, 2px -2px 10px #000, -2px -2px 10px #A6F1D5;
+    margin-top: 70px;
+}
+
+.sUbti01 {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.hOnbun01 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 23px;
+    margin-left: 25px;
+}
+
+.jOin01 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 52px;
+    margin-left: 25px;
+}
+
+/* コピペボックス01エリア */
+.cOpype01 {
+    position: relative;
+    background: #fff;
+    border: 1px solid #ddd;
+    display: flex;
+    margin: 30px auto;
+    width: 405px;
+
+    input {
+        padding: 10px;
+        font-size: 16px;
+        color: #555;
+        font-weight: bold;
+        border: none;
+        outline: none;
+        width: 405px;
+    }
+
+    button {
+        padding: 10px;
+        background: #000;
+        font-size: 18px;
+        font-weight: bold;
+        color: #fff;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        width: 40%;
+
+        &:active {
+            background: #ddd;
+        }
+
+        &::before {
+            content: "コピーしました！";
+            position: absolute;
+            top: -48px;
+            right: 0px;
+            background: #ccc;
+            border-radius: 10px;
+            padding: 9px 15px;
+            font-size: 14px;
+            display: none;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: -20px;
+            right: 25px;
+            width: 10px;
+            height: 10px;
+            background: #ccc;
+            transform: rotate(45deg);
+            display: none;
+        }
+    }
+
+    &.active button::after,
+    &.active button::before {
+        display: block;
+    }
+}
+
+/* ↑コピペボックスここまで */
+
+.cP01area {
+    background-image: url(/images/22green_banner02.png);
+    height: 530px;
+    margin-top: 70px;
+    height: 530px;
+    width: 1040px;
+}
+
+.sT01fuki {
+    display: flex;
+    justify-content: space-between;
+    margin-top: -530px;
+    margin-left: -20px;
+    gap: 700px;
+    margin-bottom: 30px;
+
+}
+
+.sT01kuma {
+    margin-left: 750px;
+}
+
+/* ここからおかわりクーポン詳細 */
+
+.aSsetcp02 {
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 70px;
+}
+
+.aSset28 {
+    object-fit: none;
+    margin-top: -350px;
+}
+
+.mOchi02 {
+    font-family: Mochiy Pop One;
+    font-size: 48px;
+    text-align: center;
+    color: #FF9ABA;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: #FFF;
+    text-shadow: 2px 2px 10px #000, -2px 2px 10px #D2AEFF, 2px -2px 10px #000, -2px -2px 10px #D2AEFF;
+    margin-top: -480px;
+}
+
+.sUbti02 {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.hOnbun02 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 60px;
+    margin-right: 25px;
+    text-align: right;
+}
+
+.jOin02 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-left: 430px;
+}
+
+.cP02area {
+    background-image: url(/images/26purple_banner02.png);
+    height: 451px;
+    margin-top: 45px;
+    width: 1040px;
+}
+
+/* ここから戦利品自慢CP */
+.mOchi03 {
+    font-family: Mochiy Pop One;
+    font-size: 48px;
+    text-align: center;
+    color: #FF9ABA;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: #FFFFA6;
+    text-shadow: 2px 2px 10px #000, -2px 2px 10px #A6F1D5, 2px -2px 10px #000, -2px -2px 10px #A6F1D5;
+}
+
+.sUbti03 {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.hOnbun03 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-left: 25px;
+}
+
+.jOin03 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-left: 25px;
+}
+
+/* コピペボックス02エリア */
+.cOpype02 {
+    position: relative;
+    background: #fff;
+    border: 1px solid #ddd;
+    display: flex;
+    margin: 20px auto;
+    width: 405px;
+
+    input {
+        padding: 10px;
+        font-size: 16px;
+        color: #555;
+        font-weight: bold;
+        border: none;
+        outline: none;
+        width: 405px;
+    }
+
+    button {
+        padding: 10px;
+        background: #000;
+        font-size: 18px;
+        font-weight: bold;
+        color: #fff;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        width: 40%;
+
+        &:active {
+            background: #ddd;
+        }
+
+        &::before {
+            content: "コピーしました！";
+            position: absolute;
+            top: -48px;
+            right: 0px;
+            background: #ccc;
+            border-radius: 10px;
+            padding: 9px 15px;
+            font-size: 14px;
+            display: none;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: -20px;
+            right: 25px;
+            width: 10px;
+            height: 10px;
+            background: #ccc;
+            transform: rotate(45deg);
+            display: none;
+        }
+    }
+
+    &.active button::after,
+    &.active button::before {
+        display: block;
+    }
+}
+
+/* ↑コピペボックス02ここまで */
+
+.cP03area {
+    background-image: url(/images/29green_banner02.png);
+    height: 530px;
+    margin-top: 68px;
+    width: 1040px;
+}
+
+.aSsetcp03 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: -570px;
+    margin-left: -25px;
+    gap: 700px;
+}
+
+.aSset31 {
+    object-fit: none;
+}
+
+.aSset32 {
+    display: block;
+    margin-top: 290px;
+}
+
+.aSset33 {
+    display: block;
+    margin-top: -400px;
+    margin-left: 700px;
+}
+
+/* 動かないのぞきくまっぽ */
+.aSset34 {
+    display: block;
+    margin-top: -350px;
+    margin-left: 1040px;
+}
+
+
+
+/* みんなの投稿エリア */
+
+.mOchi04 {
+    font-family: Mochiy Pop One;
+    font-size: 48px;
+    text-align: center;
+    color: #FFf;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: #BD89FF;
+    text-shadow: 2px 2px 10px #000, -2px 2px 10px #FF9ABA, 2px -2px 10px #000, -2px -2px 10px #FF9ABA;
+    margin-top: 60px;
+
+}
+
+.hOnbun04 {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: #000;
+}
+
+.hOnbun04 span {
+    background: linear-gradient(transparent 50%, #FFFFA6 50%);
+    padding: 0 0.1em;
+}
+
+.tOukou04 {
+    background-image: url(/images/35pink_banner\ 1.png);
+    height: 280px;
+    width: 750px;
+    margin-top: 100px;
+}
+
+.sNslink {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: -150px;
+}
+
+.aSsetgp06 {
+    display: flex;
+    margin-top: -150px;
+}
+
+
+.aSset39 {
+    margin-left: 500px;
+}
+
+
+#toUkou {
+    width: 725px;
+    height: 278px;
+    margin: 0 auto;
+}
+
+
+
+/* ここからショップ紹介 */
+
+.mOchi05 {
+    font-family: Mochiy Pop One;
+    font-size: 48px;
+    color: #FF9ABA;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: #FFF;
+    text-shadow: 2px 2px 10px #A6F1D5, -2px 2px 10px #A6F1D5, 2px -2px 10px #A6F1D5, -2px -2px 10px #A6F1D5;
+    text-align: center;
+    margin-top: 120px;
+    margin-left: 180px;
+    max-width: 1040px;
+}
+
+.sHopSNS {
+    text-align: center;
+    margin-top: 10px;
+    width: 1040px;
+    margin: 0 auto;
+}
+
+.aSsetg03 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: -660px;
+    margin-left: 200px;
+    width: 1000px;
+}
+
+.aSset41 {
+    object-fit: none;
+    margin-right: 90px;
+}
+
+/* ここから特集ページ */
+.mOchi06 {
+    font-family: Mochiy Pop One;
+    font-size: 48px;
+    text-align: center;
+    color: #D2AEFF;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: #FFF;
+    text-shadow: 2px 2px 10px #A6F1D5, -2px 2px 10px #A6F1D5, 2px -2px 10px #A6F1D5, -2px -2px 10px #A6F1D5;
+    margin-top: 600px;
+    margin-left: 20px;
+    max-width: 1440px;
+}
+
+.aSsetgG {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1040px;
+    margin: 0 auto;
+    margin-top: -670px;
+}
+
+
+/* ここから下部イベントリンク以下 */
+.aSset46 {
+    margin: 0 auto;
+    margin-top: 270px;
+    margin-bottom: 80px;
+}
+
+.cHarabottom {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    max-width: 712px;
+    margin: 0 auto;
+}
+
+
+
+.aSset46 {
+    text-align: center;
+    margin-top: 550px;
+    margin-bottom: 50px;
+}
+
+.tOpre {
+    display: block;
+    margin-left: 1040px;
+    width: 160px;
+}
+
+/* ここからフッター */
+
+#footer {
+    font-family: "Roboto", "M PLUS 1 Code", "Mochiy Pop One", sans-serif;
+    font-optical-sizing: auto;
+    background-color: #A6F1D5;
+    font-size: 16px;
+    color: #000;
+    max-width: 1440px;
+}
+
+.bOttommenu {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    font-weight: bold;
+}
+
+.fOotermenu {
+    margin-top: 20px;
+    color: #000;
+    line-height: 30px;
+}
+
+
+
+
+
+
+/* ここからレスポンシブ */
+@media screen and (max-width:520px) {
+
+    .naVevent {
+        width: 120px;
+    }
+
+    .naVmenu {
+        display: flex;
+        color: #BD89FF;
+        font-size: 12px;
+        font-weight: bolder;
+        text-shadow: 3px 3px #fff;
+        line-height: normal;
+        margin-top: 15px;
+        margin-right: auto;
+        margin-left: 0;
+    }
+
+
+    .naVmenu li {
+        margin: 0 6px;
+    }
+
+
+    .puku_btn {
+        display: inline-block;
+        text-align: center;
+        text-decoration: none;
+        -webkit-transition: all .3s;
+        transition: all .3s;
+    }
+
+    .puku_btn:hover {
+        transform: scale(0.8, 0.8);
+    }
+
+
+    .snsIcon {
+        width: 7vh;
+        height: 7vh;
+    }
+
+
+    #header {
+        width: 100%;
+        background-color: #A6F1D5;
+        height: 8%;
+    }
+
+    .slider {
+        max-width: 100%;
+        text-align: center;
+        height: 265px;
+
+    }
+
+    .slid {
+        object-fit: cover;
+        object-position: center;
+        height: 265px;
+    }
+
+
+    .fVmovie {
+        display: inline;
+        margin: 0 auto;
+        position: absolute;
+        right: 0;
+        left: 0;
+        top: 42rem;
+    }
+
+
+    .mAincatch {
+        width: 100%;
+        font-size: 18px;
+        background-image: url(/images/12h1_banner.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: center;
+        margin-top: 270px;
+    }
+
+    .fontMochiy {
+        margin-top: 30px;
+    }
+
+    /* キャンペーン小見出し
+     */
+    .cPst01 {
+        font-size: 24px;
+        width: 80%;
+        height: 100%;
+        margin: 0 auto;
+    }
+
+    .cPimg01 {
+        display: flex;
+        margin: 0 auto;
+        margin-bottom: -20px;
+    }
+
+    .sT01 {
+        padding: 20px 0px;
+    }
+
+
+
+    .cPst02 {
+        font-size: 24px;
+        width: 80%;
+        height: 100%;
+        margin: 0 auto;
+    }
+
+    .cPimg02 {
+        display: flex;
+        margin: 0 auto;
+        margin-bottom: -20px;
+    }
+
+    .sT02 {
+        padding: 20px 0px;
+    }
+
+
+    .cPst03 {
+        font-size: 24px;
+        width: 80%;
+        height: 100%;
+        margin: 0 auto;
+    }
+
+    .cPimg03 {
+        display: flex;
+        margin: 0 auto;
+        margin-bottom: -20px;
+    }
+
+    .sT03 {
+        padding: 20px 0px;
+    }
+
+
+    .sankaku {
+        display: none;
+    }
+
+    #taGcp {
+        margin-top: -50px;
+        display: flex;
+        flex-flow: column;
+
+    }
+
+    /* 投稿見本 */
+
+    .mIhon {
+        align-items: center;
+    }
+
+    .pHotoimg {
+        display: flex;
+        flex-flow: column;
+        gap: 90px;
+        align-items: center;
+        margin-top: 40px;
+        /* ← 追加 */
+    }
+
+    .tAgtex {
+        display: flex;
+        flex-flow: column;
+        gap: 310px;
+        align-items: center;
+        margin-top: -740px;
+        /* ← 追加 */
+    }
+
+    .img16,
+    .img17 {
+        object-fit: contain;
+        margin-right: 58%;
+    }
+
+    .img19,
+    .img20 {
+        object-fit: contain;
+        margin-right: 58%;
+    }
+
+    .img19 {
+        transform: rotate(12deg);
+    }
+
+    .img20 {
+        transform: rotate(-14deg);
+    }
+
+    .tExtag {
+        margin-right: 58%;
+        margin-top: -370px;
+    }
+
+    .aSset18 {
+        display: none;
+    }
+
+    /* CP推しトキ */
+
+    #oShitoki {
+        margin-top: 400px;
+    }
+
+    .mOchi01 {
+        font-family: Mochiy Pop One;
+        font-size: 32px;
+        text-align: center;
+        color: #FF9ABA;
+        margin-top: 70px;
+    }
+
+
+    .sUbti01 {
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .hOnbun01 {
+        font-size: 16px;
+        font-weight: bold;
+        margin-top: 23px;
+        margin-left: 25px;
+    }
+
+    .jOin01 {
+        font-size: 16px;
+        font-weight: bold;
+        margin-top: 30px;
+        margin-left: 25px;
+    }
+
+    .cOpype01 {
+        margin-top: 10px;
+    }
+
+
+    .cP01area {
+        width: 100%;
+        background-image: url(/images/22green_banner02.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+
+    .sT01fuki {
+        width: 30%;
+        margin-top: 30px;
+        display: flex;
+        margin-left: 20px;
+        gap: 100px;
+    }
+
+
+    .sT01kuma {
+        width: 50%;
+        display: flex;
+        margin: 0 auto;
+        margin-top: -50px;
+    }
+
+
+    /* CPおかわりクーポン */
+
+    .mOchi02 {
+        font-family: Mochiy Pop One;
+        font-size: 32px;
+        text-align: center;
+        color: #FF9ABA;
+        -webkit-text-stroke-width: 3px;
+        -webkit-text-stroke-color: #FFF;
+        text-shadow: 2px 2px 10px #000, -2px 2px 10px #D2AEFF, 2px -2px 10px #000, -2px -2px 10px #D2AEFF;
+        margin-top: -10px;
+    }
+
+    .sUbti02 {
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .hOnbun02 {
+        font-size: 16px;
+        font-weight: bold;
+        margin-top: 10px;
+        margin-right: 25px;
+        text-align: right;
+    }
+
+    .jOin02 {
+        font-size: 16px;
+        font-weight: bold;
+        margin-top: 10px;
+        margin-left: 25px;
+    }
+
+    .cP02area {
+        width: 100%;
+        background-image: url(/images/26purple_banner02.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-top: 300px;
+    }
+
+    .aSsetcp02 {
+        display: flex;
+    }
+
+    .aSset27 {
+        width: 45%;
+        margin-top: -300px;
+    }
+
+    .aSset28 {
+        margin-top: -300px;
+    }
+
+    /* 戦利品CP */
+    .mOchi03 {
+        font-family: Mochiy Pop One;
+        font-size: 32px;
+        text-align: center;
+        color: #FF9ABA;
+    }
+
+    .sUbti03 {
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .hOnbun03 {
+        font-size: 16px;
+        font-weight: bold;
+        margin-top: 20px;
+        margin-left: 25px;
+    }
+
+    .jOin03 {
+        font-size: 16px;
+        font-weight: bold;
+        margin-top: 20px;
+        margin-left: 25px;
+    }
+
+    .cP03area {
+        width: 100%;
+        background-image: url(/images/29green_banner02.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .aSsetcp03,
+    .aSset32 {
+        display: none;
+    }
+
+
+
+    .aSset34 {
+        width: 40%;
+        margin-right: auto;
+        margin-left: 0;
+        margin-top: -300px;
+    }
+
+    .aSset33 {
+        width: 50%;
+        margin-left: auto;
+        margin-right: 0;
+        margin-top: 100px;
+    }
+
+    /* みんなの投稿 */
+    #toUkou {
+        display: none;
+    }
+
+    /* ショップ紹介 */
+
+    .aSsetg03 {
+        display: none;
+    }
+
+    .mOchi05 {
+        display: inline;
+        margin-left: 10px;
+        color: #D2AEFF;
+        font-size: 32px;
+        margin-top: 30px;
+    }
+
+
+
+
+    /* 特集ページ */
+    .aSsetgG {
+        display: none;
+    }
+
+    .mOchi06 {
+        display: flex;
+        align-items: center;
+        color: #FF9ABA;
+        font-size: 32px;
+        margin-top: 30px;
+    }
+
+    /* イベントリンク以下 */
+    .aSset46 {
+        width: 50%;
+        margin-top: 20px;
+    }
+
+    .aSset47 {
+        width: 120px;
+        height: 120px;
+    }
+
+    .aSset48 {
+        width: 160px;
+        height: 190px;
+    }
+
+    .aSset49 {
+        width: 190px;
+        height: 220px;
+    }
+
+
+    /* フッター */
+    .bOttomnav {
+        font-size: 16px;
+    }
+
+    .bOttommenu {
+        display: flex;
+        flex-flow: column;
+        gap: 10px;
+    }
+
+
+
+}
